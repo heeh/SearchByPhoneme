@@ -8,8 +8,8 @@
 * 튜토리얼
   1. 입력파일 설정: extractor.py 소스 내부의 변수 f부분 수정
   2. 출력파일 설정: extractor.py 소스 내부의 변수 g부분 수정
-  3. 음절 / 단어 검색: wrongwords.txt에 매칭하고자 하는 단어 입력
-  4. 음소검색: 초성, 중성, 혹은 종성을 명시한후 if 조건 추가
+  3. 음소검색: 초성, 중성, 혹은 종성을 명시한후 if 조건 추가. 문의사항은 이메일로 부탁드려요.
+  4. 음절 / 단어 검색: wrongwords.txt에 매칭하고자 하는 단어 입력
   5. python extractor.py 실행
 
 * 예시
@@ -24,3 +24,28 @@
   * foo.txt: 입력파일 예시
   * foo.txt.fix: 출력파일 예시
   * unicodeSort.sh: wrongwords.txt 정렬(선택사항)
+
+
+* Extracts korean words which contain phoneme(onset, nucleus, or coda), syllable, or word.
+* Usage
+  $ python extractor.py
+
+* Tutorial
+  1. Input file: Modify the variable 'f' in extractor.py.
+  2. Output file: Modify the variable 'g' in extractor.py.
+  3. Phoneme-based Search: You have to modify extractor.py. E-mail me if you are lost.
+  4. Syllable or Word based search: Add words to wrongwords.txt
+  5. Execute python extractor.py
+
+* 예시
+  * Phoneme-based Search 1: Retrieve whole lines which contain coda 'ㅅ'. (햇, 겟, 갓네, )
+  * Phoneme-based Search 2: Retrieve whole lines which contain onset'ㅉ' and nucleus'ㅣ'. (찍, 찐, 찜, ...)
+  * Syllable-based Search : Extract whole lines which contain '쟎'. (했쟎아, 있쟎아, ...)
+  * Word-based Search     : Extract whole lines which start with "조으". (조으냐, 조으네, ...)
+
+* Files
+  * extractor.py: A file contains main function
+  * wrongwords.txt: A files contains syllables or words to be searched.(By line)
+  * foo.txt: input example
+  * foo.txt.fix: output example
+  * unicodeSort.sh: A file which sorts wrongwords.txt(Not so important)

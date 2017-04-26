@@ -38,11 +38,11 @@ def getCoda(ch): # 문자코드에서 종성을 추출하는 함수
 wrongwords = codecs.open("wrongwords.txt", "r", "utf-8")
 wronglines = wrongwords.readlines()
 
-# 입력파일
-f = codecs.open("foo.txt", "r", "utf-8")
 
-# 출력파일
-g = codecs.open("foo.txt.fix",'w',"utf-8")
+f = codecs.open("foo.txt", "r", "utf-8") # 입력파일
+
+
+g = codecs.open("foo.txt.fix",'w',"utf-8") # 출력파일
 
 #f = codecs.open("../hunspell/150112_general.3.txt.uniq.hunspell", "r", "utf-8")
 #g = codecs.open("../extr/150112_general.3.txt.uniq.hunspell.extr",'w',"utf-8")
