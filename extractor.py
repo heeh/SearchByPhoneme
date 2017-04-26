@@ -19,7 +19,6 @@ JAMO_CYCLE = 588
 
 import codecs
 
-
 # 함수모음
 def isHangul(ch): #주어진 문자가 한글인지 아닌지 리턴해주는 함수
     JAMO_START_LETTER = 44032
@@ -35,28 +34,21 @@ def getNucleus(ch): #문자코드에서 중성을 추출하는 함수
 def getCoda(ch): # 문자코드에서 종성을 추출하는 함수
     return unichr((ord(ch) - JAMO_START_LETTER) % 28 + CODA_START_LETTER -1)
 
-
 # 파일로부터 잘못될 가능성이 높은 음절 혹은 단어를 가져옵니다.
 wrongwords = codecs.open("wrongwords.txt", "r", "utf-8")
 wronglines = wrongwords.readlines()
 
-
+# 입력파일
 f = codecs.open("foo.txt", "r", "utf-8")
+
+# 출력파일
 g = codecs.open("foo.txt.fix",'w',"utf-8")
 
 #f = codecs.open("../hunspell/150112_general.3.txt.uniq.hunspell", "r", "utf-8")
 #g = codecs.open("../extr/150112_general.3.txt.uniq.hunspell.extr",'w',"utf-8")
 
 print "Name of the file: ", f.name
-
 lines = f.readlines()
-
-
-
-
-
-
-
 
 # 음소검색
 
@@ -68,9 +60,6 @@ bb1 = unichr(ord(getOnset(u"찌")))
 bb2 = unichr(ord(getNucleus(u"찌")))
 bb3 = unichr(ord(getCoda(u"찌")))
 
-
-
-
 for line in lines:
     # wrongwords.txt에 포함된 "음절 혹은 단어" 검색
     for wrongline in wronglines:
@@ -78,7 +67,7 @@ for line in lines:
             g.write(line)
             break;
     
-    # 음소검색
+    # 음소검색: i는 인덱스로 사용가능. c는 다음 음절
     for i, c in enumerate(line):
         #    for ch in line:
         if isHangul(c):
