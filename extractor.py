@@ -32,8 +32,8 @@ def getCoda(ch): # 문자코드에서 종성을 추출하는 함수
 wrongwords = codecs.open("wrongwords.txt", "r", "utf-8")
 wronglines = wrongwords.readlines()
 
-f = codecs.open("../hunspell/150112_general.7.txt.uniq.hunspell", "r", "utf-8")
-g = codecs.open("../extr/150112_general.7.txt.uniq.hunspell.extr",'w',"utf-8")
+f = codecs.open("../hunspell/150112_general.18.txt.uniq.hunspell", "r", "utf-8")
+g = codecs.open("../extr/150112_general.18.txt.uniq.hunspell.extr",'w',"utf-8")
 print "Name of the file: ", f.name
 
 lines = f.readlines()
