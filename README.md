@@ -26,7 +26,10 @@
   * unicodeSort.sh: wrongwords.txt 정렬(선택사항)
 
 
-* Extracts korean words which contain phoneme(onset, nucleus, or coda), syllable, or word.
+
+# Extractor v1.0: Search-based Korean string extractor(Phonemes, Syllables, or Words)
+
+* Extracts korean words which contain phonemes(onset, nucleus, or coda), syllables, or words.
 * Usage
   $ python extractor.py
 
