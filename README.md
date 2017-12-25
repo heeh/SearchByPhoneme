@@ -28,7 +28,7 @@
 
 
 # Extractor v1.0  
-## Search-based Korean string extractor(Phonemes, Syllables, or Words)
+## Korean string extractor(By searching phonemes, syllables, or words)
 
 * Extracts korean words which contain phonemes(onset, nucleus, or coda), syllables, or words.
 * Usage
