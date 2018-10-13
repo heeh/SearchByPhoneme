@@ -1,3 +1,31 @@
+# Extractor v1.0  
+## Korean string extractor(By searching phonemes, syllables, or words)
+
+* Extracts korean words which contain phonemes(onset, nucleus, or coda), syllables, or words.
+* Usage
+  $ python extractor.py
+
+* Tutorial
+  1. Input file: Modify the variable 'f' in extractor.py.
+  2. Output file: Modify the variable 'g' in extractor.py.
+  3. Phoneme-based Search: You have to modify extractor.py. E-mail me if you are lost.
+  4. Syllable or Word based search: Add words to wrongwords.txt
+  5. Execute python extractor.py
+
+* 예시
+  * Phoneme-based Search 1: Retrieve whole lines which contain coda 'ㅅ'. (햇, 겟, 갓네, )
+  * Phoneme-based Search 2: Retrieve whole lines which contain onset'ㅉ' and nucleus'ㅣ'. (찍, 찐, 찜, ...)
+  * Syllable-based Search : Extract whole lines which contain '쟎'. (했쟎아, 있쟎아, ...)
+  * Word-based Search     : Extract whole lines which start with "조으". (조으냐, 조으네, ...)
+
+* Files
+  * extractor.py: A file contains main function
+  * wrongwords.txt: A files contains syllables or words to be searched.(By line)
+  * foo.txt: input example
+  * foo.txt.fix: output example
+  * unicodeSort.sh: A file which sorts wrongwords.txt(Not so important)
+
+
 # Extractor v1.0 (한국어 검색기반 문자열 추출기)
 
 * 한국어 음소/음절/단어를 포함하는  문자열 추출
@@ -26,30 +54,3 @@
   * unicodeSort.sh: wrongwords.txt 정렬(선택사항)
 
 
-
-# Extractor v1.0  
-## Korean string extractor(By searching phonemes, syllables, or words)
-
-* Extracts korean words which contain phonemes(onset, nucleus, or coda), syllables, or words.
-* Usage
-  $ python extractor.py
-
-* Tutorial
-  1. Input file: Modify the variable 'f' in extractor.py.
-  2. Output file: Modify the variable 'g' in extractor.py.
-  3. Phoneme-based Search: You have to modify extractor.py. E-mail me if you are lost.
-  4. Syllable or Word based search: Add words to wrongwords.txt
-  5. Execute python extractor.py
-
-* 예시
-  * Phoneme-based Search 1: Retrieve whole lines which contain coda 'ㅅ'. (햇, 겟, 갓네, )
-  * Phoneme-based Search 2: Retrieve whole lines which contain onset'ㅉ' and nucleus'ㅣ'. (찍, 찐, 찜, ...)
-  * Syllable-based Search : Extract whole lines which contain '쟎'. (했쟎아, 있쟎아, ...)
-  * Word-based Search     : Extract whole lines which start with "조으". (조으냐, 조으네, ...)
-
-* Files
-  * extractor.py: A file contains main function
-  * wrongwords.txt: A files contains syllables or words to be searched.(By line)
-  * foo.txt: input example
-  * foo.txt.fix: output example
-  * unicodeSort.sh: A file which sorts wrongwords.txt(Not so important)
